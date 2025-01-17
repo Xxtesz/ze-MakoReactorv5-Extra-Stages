@@ -1922,7 +1922,23 @@
       },
       "replace": {
         "io": {
-          "timestofire": 0
+          "timestofire": -1
+        }
+      }
+    },
+    {
+      "match": {
+        "classname": "logic_relay",
+        "targetname": "[PR#]bah_cast_ULTIMA",
+        "io": [
+          {
+            "timestofire": 1
+          }
+        ]
+      },
+      "replace": {
+        "io": {
+          "timestofire": -1
         }
       }
     },
@@ -4743,6 +4759,12 @@
           "outputname": "OnTrigger",
           "targetname": "[PR#]medio_breakable",
           "inputname": "Break",
+          "timestofire": 1
+        },
+        {
+          "outputname": "OnTrigger",
+          "targetname": "[PR#]trigger_100",
+          "inputname": "Kill",
           "timestofire": 1
         },
         {
@@ -10718,6 +10740,12 @@
         },
         {
           "outputname": "OnTrigger",
+          "targetname": "[PR#]trigger_100",
+          "inputname": "Kill",
+          "timestofire": 1
+        },
+        {
+          "outputname": "OnTrigger",
           "targetname": "[PR#]trigger_n_d",
           "inputname": "Kill",
           "timestofire": 1
@@ -12046,7 +12074,7 @@
         {
           "outputname": "OnTimer",
           "targetname": "[PR#]ss_only",
-          "inputname": "PlaySound",
+          "inputname": "StartSound",
           "timestofire": 1
         },
         {
